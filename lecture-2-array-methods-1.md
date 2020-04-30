@@ -20,10 +20,10 @@ The `.concat()` method returns a _new_ array with the values of two existing arr
 
 ```js
 // Example
-const arrayOne = ['think', 'dream', 'learn', 'write'];
-const arrayTwo = ['thought', 'dreams', 'knowledge', 'truth'];
-
+const arrayOne = ["think", "dream", "learn", "write"];
+const arrayTwo = ["thought", "dreams", "knowledge", "truth"];
 let newArray = arrayOne.concat(arrayTwo);
+console.log(newArray);
 ```
 
 ---
@@ -33,16 +33,16 @@ let newArray = arrayOne.concat(arrayTwo);
 The `.join()` method returns the array as a string.
 
 ```js
-// Example
+//  REVIEW
 const lexicon = [
-  'The',
-  'large',
-  'shaggy',
-  'dog',
-  'barked',
-  'at',
-  'the',
-  'silence',
+  "The",
+  "large",
+  "shaggy",
+  "dog",
+  "barked",
+  "at",
+  "the",
+  "silence",
 ];
 
 let sentence = lexicon.join();

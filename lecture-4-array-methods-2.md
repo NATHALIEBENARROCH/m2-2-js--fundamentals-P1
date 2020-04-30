@@ -18,6 +18,8 @@ We want to filter out all negative numbers:
 `[3, 1, 5, 8, 4]`
 
 How do we do that?
+let array = `[3, -7, 1, 5, -2, 8, -9, 4]`;
+array.filter()
 
 ---
 
@@ -34,14 +36,14 @@ The `.forEach()` method calls a function once for every element of the array.
 ```js
 // Example
 const words = [
-  'The',
-  'large',
-  'shaggy',
-  'dog',
-  'barked',
-  'at',
-  'the',
-  'silence',
+  "The",
+  "large",
+  "shaggy",
+  "dog",
+  "barked",
+  "at",
+  "the",
+  "silence",
 ];
 
 words.forEach(function (word) {
@@ -60,14 +62,14 @@ The `.map()` method calls the provided function once for every element in the ar
 ```js
 // Example
 const words = [
-  'The',
-  'large',
-  'shaggy',
-  'dog',
-  'barked',
-  'at',
-  'the',
-  'silence',
+  "The",
+  "large",
+  "shaggy",
+  "dog",
+  "barked",
+  "at",
+  "the",
+  "silence",
 ];
 
 const newWords = words.map(function (word) {
@@ -84,12 +86,12 @@ The `.find()` method is like `filter`, except it returns the _first_ match.
 ```js
 // Example
 const pizzas = [
-  { name: 'pepperoni', isVegetarian: false },
-  { name: 'all-dressed', isVegetarian: false },
-  { name: 'green pepper and onion', isVegetarian: true },
-  { name: 'smoked meat', isVegetarian: false },
-  { name: 'cheese', isVegetarian: true },
-  { name: 'sundried tomatoes', isVegetarian: true },
+  { name: "pepperoni", isVegetarian: false },
+  { name: "all-dressed", isVegetarian: false },
+  { name: "green pepper and onion", isVegetarian: true },
+  { name: "smoked meat", isVegetarian: false },
+  { name: "cheese", isVegetarian: true },
+  { name: "sundried tomatoes", isVegetarian: true },
 ];
 
 const somethingICanEat = words.find(function (pizza) {
@@ -108,11 +110,11 @@ It returns `true` or `false`.
 ```js
 // Example
 const snacksInMyBackpack = [
-  { name: 'crackers', containsPeanuts: false },
-  { name: 'M&Ms', containsPeanuts: false },
-  { name: 'Lucky Charms', containsPeanuts: false },
-  { name: 'trail mix', containsPeanuts: true },
-  { name: 'grapes', containsPeanuts: false },
+  { name: "crackers", containsPeanuts: false },
+  { name: "M&Ms", containsPeanuts: false },
+  { name: "Lucky Charms", containsPeanuts: false },
+  { name: "trail mix", containsPeanuts: true },
+  { name: "grapes", containsPeanuts: false },
 ];
 
 const canEnterSchool = snacksInMyBackpack.every(function (snack) {

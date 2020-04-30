@@ -42,7 +42,7 @@ Strings have a bunch of methods and properties that will be immediately useful. 
 
 ```js
 // Example
-const sentiment = 'I love programming';
+const sentiment = "I love programming";
 sentiment.length;
 ```
 
@@ -56,7 +56,8 @@ It takes 2 parameters, the value to replace and the new value.
 
 ```js
 // Example
-const sentiment = 'I love programming';
+const sentiment = "I love programming";
+sentiment.replace("love", "adore");
 ```
 
 ---
@@ -69,7 +70,8 @@ const sentiment = 'I love programming';
 
 ```js
 // Example
-const sentiment = 'I love programming';
+const sentiment = "I love programming";
+sentiment.slice(2, 6);
 ```
 
 ---
@@ -81,9 +83,10 @@ The `.includes()` method tells us if a string includes another string
 ```js
 // Example
 let sentence = "Let's have a pizza party!";
+sentence.includes("pizza");
 ```
 
----
+DONE
 
 ### [`.split()`](https://www.w3schools.com/jsreF/jsref_split.asp)
 
@@ -91,7 +94,8 @@ The `.split()` method "split" a string into an array of _substrings_.
 
 ```js
 // Example
-const truth = 'The greatest teacher, failure is.';
+const truth = "The greatest teacher, failure is.";
+truth.split(" ");
 ```
 
 ---
@@ -102,13 +106,14 @@ The `.indexOf()` method returns the position of the first occurrence of a specif
 
 This method returns -1 if the value to search for never occurs.
 
-```js
+````js
 // Example
 let yodaSpeak =
   'Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.';
-```
+yodaSpeak.indexOf("side");
 
 _Why would JavaScript decide to return `-1` instead of some other value? like `0`?_
+means cannot be found.
 
 ---
 
@@ -117,41 +122,56 @@ _Why would JavaScript decide to return `-1` instead of some other value? like `0
 Turn an input string into another string
 
 ---
-
+// REVIEW
 ```js
 const input = 'I am a really long sentence, look how many words I have!';
+let startingIndex = input.indexOf("sentence");
+let endingIndex = input.indexOf("many");
+input.slice(startingIndex,endingIndex);
+
 
 // output: "sentence, look how"
-```
+const output = "sentence, look how"
 
 ---
 
-### Let's do this in groups!
+const output = "### Let's do this in groups!"
 
 We'll test the **breakout rooms** feature 😀
 
 ---
-
+// HEEERE
 ```js
 const input = 'Hi World';
+const input = 'Hi World';
+input.replace('Hi','Hello');
 
-// output: "Hello world!"
-```
+const input = 'I am a really long sentence, look how many words I have!';
+let startingIndex = input.indexOf("sentence");
+let endingIndex = input.indexOf("many");
+input.slice(startingIndex,endingIndex);
 
+// HEEERE
 ```js
 const input = 'I am 23 years old!';
+input.replace("23 years ",'');
 
 // output: "I am old!"
-```
+````
 
-```js
-const input = 'How are you today?';
+<!-- IS THIS OK -->
 
+````js
+const input = "How are you today?";
+input.replace("today", "yesterday");
+
+// HOW TO DO THIS
 // output: ["how", "are", "you", "yesterday?"]
-```
+```input.split(" ");
 
 ---
 
 ## More String Methods here...
 
 https://www.w3schools.com/jsreF/jsref_obj_string.asp
+````
