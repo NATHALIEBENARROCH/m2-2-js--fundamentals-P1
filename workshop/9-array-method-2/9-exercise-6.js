@@ -13,7 +13,12 @@
 // For example: greet(["bob", "eric"]) returns ["Hello bob", "Hello eric"]
 
 function greet(lst) {
-  // lst is an array of strings
+greet.array.forEach((lst =>lst.forall);
 }
 
 console.log('Q6 greet()', greet(['David', 'Billy', 'Lisa', 'Jennifer']));
+
+// EXAMPLE
+function keepLong(lst) {
+  return lst.filter((string =>string.length);
+}

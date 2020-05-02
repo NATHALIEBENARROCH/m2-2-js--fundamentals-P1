@@ -46,6 +46,8 @@ console.log(`A1) Morty has ${numberOfNames} names`);
 
 const son = "son sonny dear";
 const theNames = son.split(" ");
+const namesNumber = theNames.length;
+console.log(`They are ${namesNumber}`);
 //
 //
 //
@@ -55,7 +57,7 @@ const theNames = son.split(" ");
 
 const alternateRicks =
   "Simple Rick, Slow Rick, Tall Rick, Cop Rick, Doofus Rick, Past Rick, Replacement Rick, Insurance Rick, Sales Rick, Supervisor Rick, Cool Rick, Cowboy Rick, Tiny Rick, Cronenberg Rick, Teacher Rick, Farmer Rick, Future Rick, Rick J22, Evil Rick, Toxic Rick, Crunk Rick, Pickle Rick, The Scientist Formerly Known as Rick, Rick C-137";
-alternateRicks.split(" ");
+alternateRicks.split(", ");
 //
 //
 // Q3
@@ -63,7 +65,7 @@ alternateRicks.split(" ");
 // HINT: There are multiple ways to solve this one. Maybe try a `for` loop!
 const alternateRicks =
   "Simple Rick, Slow Rick, Tall Rick, Cop Rick, Doofus Rick, Past Rick, Replacement Rick, Insurance Rick, Sales Rick, Supervisor Rick, Cool Rick, Cowboy Rick, Tiny Rick, Cronenberg Rick, Teacher Rick, Farmer Rick, Future Rick, Rick J22, Evil Rick, Toxic Rick, Crunk Rick, Pickle Rick, The Scientist Formerly Known as Rick, Rick C-137";
-let rickArray = alternateRicks.split(",");
+let rickArray = alternateRicks.split(", ");
 let Rickcount = 0;
 for (x = 0; x < rickArray.length; x++) {
   if (rickArray[x].includes("Rick")) {
@@ -78,29 +80,39 @@ for (x = 0; x < rickArray.length; x++) {
 // Q4
 // How many characters are there in rickSaying (without spaces)?
 const rickSaying = "wubba lubba dub dub";
-const newRick = rickSaying.replace(" ", "");
+
+const newRick = rickSaying.replace(' ', '')
+const newRick = rickSaying.split(" ").join("");
 newRick.length;
 //
 //
 //
-//
+
 // Q5
 // It turns out, Morty doesn't actually have a middle name. The `grandson`
 // string is wrong! Console Morty's name without "Antoine".
 const grandson = "Morty Antoine Smith";
-grandson.replace;
+const newGrandson = grandson.replace("Antoine ", "");
+console.log(`this is ${newGrandson}`);
 //
 //
 //
-//
+.
 // Q6
 // Scary Terry is actually not an enemy. Remove him from the list and console only Rick's true enemies.
+const enemies =
+  "Tammy Gueterman, Evil Morty, Zeep Xanflorp, Galactic Federation, Council of Ricks, Phoenixperson, Scary Terry, Abradolf Lincler, Supernova";
+let actualEnemies = enemies.replace("Scary Terry, ", "");
+console.log("A8)", actualEnemies);
 
+const enemies =
+  "Tammy Gueterman, Evil Morty, Zeep Xanflorp, Galactic Federation, Council of Ricks, Phoenixperson, Scary Terry, Abradolf Lincler, Supernova";
+let actualEnemies = enemies.replace("Scary Terry, ", "");
+console.log(actualEnemies);
 //
-//
-//
-//
+//////HELP HELP HELP
 // Q7 (STRETCH)
+
 // `secret` is an encrypted message! Let's see if we can figure out what it
 // says. To decode the message, you'll need to remove any words that are found
 // in the "notCode" array.
@@ -109,3 +121,24 @@ grandson.replace;
 //   IF secret was `bluehired`
 //   AND notCode was `['blue', 'red']`
 //   THEN the answer would be `hi` (bluehired without blue and red).
+const secret =
+  "summerlobaconokfamily ascaryt mintergalactice, I'jerrym Pimortybethckle Rick!";
+
+const notCode = [
+  "summer",
+  "bacon",
+  "scary",
+  "intergalactic",
+  "jerry",
+  "morty",
+  "beth",
+  "family",
+];
+
+
+
+let decodedMsg = secret;
+for (let i = 0; i < notCode.length; i++) {
+  decodedMsg = decodedMsg.replace(notCode[i], "");
+}
+console.log("A7)", decodedMsg);
