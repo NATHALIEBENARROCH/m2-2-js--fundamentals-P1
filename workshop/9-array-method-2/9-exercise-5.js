@@ -12,7 +12,10 @@
 // Returns a new list with all the elements of lst that are length
 // greater than 5
 function keepLong(lst) {
-  return lst.filter((string) => string.length > 5);
+  let longNames = lst.filter(function (name) {
+    return name.length > 5;
+  });
+  return longNames;
 }
 
 console.log(

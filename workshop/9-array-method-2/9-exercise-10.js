@@ -10,10 +10,26 @@
 
 // Write function here
 
+function calculateAverage(grades) {
+  let sum = grades.reduce(function (sum, grade) {
+    return sum + grade;
+  }, 0);
 
- 
-// Call the function with [48, 95, 65, 48, 59, 78, 72, 65]
+  return Math.round(sum / grades.length);
+}
+
+function equivalentLetterGrade(grade) {
+  let letterGrade = "A";
+  if (grade < 90) letterGrade = "B";
+  if (grade < 80) letterGrade = "C";
+  if (grade < 70) letterGrade = "D";
+  if (grade < 60) letterGrade = "F";
+
+  return letterGrade;
+}
+
+console.log(
+  equivalentLetterGrade(calculateAverage([48, 95, 65, 48, 59, 78, 72, 65]))
+);
 
 // Try with other values as well
-
-

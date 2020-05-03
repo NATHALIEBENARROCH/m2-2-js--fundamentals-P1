@@ -13,8 +13,25 @@
 // Otherwise ignore them completely.
 // For example: greeLong(["bob", "daniel"]) returns ["Hello daniel"]
 
-function greetLong(lst) {
-  // lst is an array of strings
+function isNameOverFourCharacters(name) {
+  return name.length > 4;
 }
+function findLong(lst) {
+  // arr.filter(callback(element))
+  // callback is a funciton that we run on all element of the array
+  // element is the current member of the array
+  // the call back will give true or false
+  // if true we keep it in the array
+  return lst.filter(isNameOverFourCharacters);
+}
+
+function greet(name) {
+  console.log(`Hello ${name}`);
+}
+
+function greetLong(lst) {
+  return findLong(lst).forEach(greet);
+}
+
+greetLong(["Scott", "Bob", "Ric", "Jim"]);
 // -------------------------------------------------------------------------
-console.log('Q7 greetLong()', greetLong(['Scott', 'Bob', 'Ric', 'Jim']));

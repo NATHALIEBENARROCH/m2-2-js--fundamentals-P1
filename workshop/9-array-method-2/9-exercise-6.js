@@ -12,14 +12,10 @@
 // Adds "Hello " to every element of greet
 // For example: greet(["bob", "eric"]) returns ["Hello bob", "Hello eric"]
 
-let greet = "Hello";
 function greet(lst) {
-greet.lst.forEach((lst =>lst.forall);
+  return lst.map(function sayHello(name) {
+    return `Hello ${name}`;
+  });
 }
 
-console.log('Hello()', greet(['David', 'Billy', 'Lisa', 'Jennifer']));
-
-// EXAMPLE
-function keepLong(lst) {
-  return lst.filter((string =>string.length);
-}
+console.log("Q6)greet", greet(["David", "Billy", "Lisa", "Jennifer"]));
